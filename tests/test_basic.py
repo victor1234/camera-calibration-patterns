@@ -9,7 +9,7 @@ def test_generate_checkerboard_creates_svg(monkeypatch):
     with tempfile.TemporaryDirectory() as tmpdir:
         output = os.path.join(tmpdir, "pattern.svg")
         test_args = [
-            "gen_pattern.py",
+            "generate-pattern",
             "-o",
             output,
             "-r",
