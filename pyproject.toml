@@ -1,0 +1,22 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = [ "poetry-core>=2,<3" ]
+
+[project]
+name = "camera-calibration-patterns"
+version = "0.1.0"
+description = "Python package for generating camera calibration patterns (based on OpenCV script)"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [
+  { name = "Victor Kataev", email = "kataev.victor.1234@gmail.com" },
+]
+requires-python = ">=3.13"
+classifiers = [ "Programming Language :: Python :: 3 :: Only", "Programming Language :: Python :: 3.13" ]
+dependencies = [
+    "numpy (>=2.3.2,<3.0.0)"
+]
+packages = [ { include = "camera_calibration_patterns", from = "src" } ]
+
+[tool.poetry.scripts]
+gen_pattern = "camera_calibration_patterns.gen_pattern:main"
