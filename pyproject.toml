@@ -20,3 +20,6 @@ packages = [ { include = "camera_calibration_patterns", from = "src" } ]
 
 [tool.poetry.scripts]
 gen_pattern = "camera_calibration_patterns.gen_pattern:main"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
